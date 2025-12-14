@@ -381,8 +381,7 @@ a:hover {
     border-radius: 0.75rem;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border: 1px solid #2563EB;
-    border-opacity: 0.2;
+    border: 1px solid rgba(37, 99, 235, 0.2);
     transition: all 0.3s ease;
     position: relative;
 }
@@ -488,8 +487,7 @@ a:hover {
     background-color: #1E1E1E;
     padding: 2rem 0;
     text-align: center;
-    border-top: 1px solid #2563EB;
-    border-top-opacity: 0.1;
+    border-top: 1px solid rgba(37, 99, 235, 0.1);
     color: #B0B0B0;
     font-size: 0.95rem;
 }
@@ -541,8 +539,7 @@ a:hover {
 .demo-form textarea {
     padding: 0.75rem 1rem;
     background-color: #121212;
-    border: 1px solid #2563EB;
-    border-opacity: 0.3;
+    border: 1px solid rgba(37, 99, 235, 0.3);
     border-radius: 0.5rem;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
@@ -597,8 +594,7 @@ a:hover {
 
 .portfolio-card {
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), transparent);
-    border: 1px solid #2563EB;
-    border-opacity: 0.2;
+    border: 1px solid rgba(37, 99, 235, 0.2);
     border-radius: 0.75rem;
     padding: 2rem;
 }
@@ -609,8 +605,7 @@ a:hover {
     gap: 1.5rem;
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #2563EB;
-    border-bottom-opacity: 0.2;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 .portfolio-avatar {
@@ -654,8 +649,7 @@ a:hover {
     gap: 1rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #2563EB;
-    border-bottom-opacity: 0.1;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 .project-item:last-child {
@@ -767,8 +761,7 @@ a:hover {
     width: 100%;
     padding: 0.875rem 1rem;
     background-color: #121212;
-    border: 1px solid #2563EB;
-    border-opacity: 0.3;
+    border: 1px solid rgba(37, 99, 235, 0.3);
     border-radius: 0.5rem;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
@@ -961,8 +954,7 @@ a:hover {
 .sidebar-section {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #2563EB;
-    border-bottom-opacity: 0.1;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 .sidebar-section:last-child {
@@ -1080,8 +1072,7 @@ a:hover {
 .preview-header {
     background-color: #252525;
     padding: 1.5rem;
-    border-bottom: 1px solid #2563EB;
-    border-bottom-opacity: 0.1;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1122,8 +1113,7 @@ a:hover {
 .form-section {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #2563EB;
-    border-bottom-opacity: 0.1;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 .form-section:last-child {
@@ -1154,8 +1144,7 @@ a:hover {
 .form-group textarea {
     padding: 0.75rem 1rem;
     background-color: #121212;
-    border: 1px solid #2563EB;
-    border-opacity: 0.3;
+    border: 1px solid rgba(37, 99, 235, 0.3);
     border-radius: 0.5rem;
     color: #FFFFFF;
     font-family: 'Inter', sans-serif;
@@ -1180,8 +1169,7 @@ a:hover {
     gap: 1rem;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #2563EB;
-    border-top-opacity: 0.1;
+    border-top: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 .form-actions .btn {
@@ -1212,8 +1200,7 @@ a:hover {
     background-color: #121212;
     padding: 1rem;
     border-radius: 0.5rem;
-    border: 1px solid #2563EB;
-    border-opacity: 0.2;
+    border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 .project-form h4 {
@@ -1292,8 +1279,7 @@ a:hover {
     gap: 0.75rem;
     padding: 1.5rem;
     background-color: #121212;
-    border: 2px solid #2563EB;
-    border-opacity: 0.3;
+    border: 2px solid rgba(37, 99, 235, 0.3);
     border-radius: 0.5rem;
     cursor: pointer;
     color: #FFFFFF;
@@ -1304,7 +1290,6 @@ a:hover {
 
 .section-option:hover {
     border-color: #2563EB;
-    border-opacity: 1;
     background-color: #252525;
 }
 
