@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Builder - PortaBuild</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2H3v10h10V2z"></path>
+                    <path d="M21 2h-10v10h10V2z"></path>
+                    <path d="M13 12H3v10h10v-10z"></path>
+                    <path d="M21 12h-10v10h10v-10z"></path>
+                </svg>
+                <span>PortaBuild</span>
+            </a>
+
+            <button class="hamburger" id="hamburgerBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><button class="nav-link logout-btn" onclick="logout()" style="background: none; border: none; cursor: pointer;">Logout</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h2>Your Portfolio</h2>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Portfolio Settings</h3>
+                <div class="form-group">
+                    <label>Accent Color</label>
+                    <div class="color-picker-inline">
+                        <input type="radio" name="accentColor" value="#2563EB" checked> Blue
+                        <input type="radio" name="accentColor" value="#EC4899"> Pink
+                        <input type="radio" name="accentColor" value="#10B981"> Green
+                        <input type="radio" name="accentColor" value="#F59E0B"> Amber
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Portfolio Sections</h3>
+                <div class="sections-list" id="sectionsList">
+                    <!-- Dynamically populated -->
+                </div>
+                <button class="btn btn-secondary btn-small" id="addSectionBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Section
+                </button>
+            </div>
+
+            <div class="sidebar-section">
+                <button class="btn btn-primary btn-full" id="publishBtn">Publish Portfolio</button>
+                <button class="btn btn-secondary btn-full" id="exportBtn">Export HTML</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Editor Panel -->
+            <div class="editor-panel">
+                <div class="editor-header">
+                    <h2>Edit Your Portfolio</h2>
+                    <button class="close-btn" id="closeEditorBtn">×</button>
+                </div>
+
+                <form class="portfolio-form" id="portfolioForm">
+                    <!-- Profile Section -->
+                    <div class="form-section">
+                        <h3>Your Profile</h3>
+                        
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" id="portfolioName" required placeholder="Your name">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Professional Title *</label>
+                            <input type="text" id="portfolioTitle" required placeholder="e.g., UX Designer, Full Stack Developer">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Bio / About Me</label>
+                            <textarea id="portfolioBio" rows="4" placeholder="Tell your professional story..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="portfolioEmail" placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input type="tel" id="portfolioPhone" placeholder="(555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" id="portfolioLocation" placeholder="City, Country">
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="form-section">
+                        <h3>Social Links</h3>
+                        
+                        <div class="form-group">
+                            <label>LinkedIn</label>
+                            <input type="url" id="portfolioLinkedin" placeholder="https://linkedin.com/in/...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>GitHub</label>
+                            <input type="url" id="portfolioGithub" placeholder="https://github.com/...">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Portfolio Website</label>
+                            <input type="url" id="portfolioWebsite" placeholder="https://yourwebsite.com">
+                        </div>
+                    </div>
+
+                    <!-- Projects Section -->
+                    <div class="form-section">
+                        <h3>Featured Projects</h3>
+                        <div id="projectsList"></div>
+                        <button type="button" class="btn btn-secondary btn-small" id="addProjectBtn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Add Project
+                        </button>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="form-section">
+                        <h3>Skills</h3>
+                        <div class="form-group">
+                            <label>Add Skill (comma-separated)</label>
+                            <textarea id="portfolioSkills" rows="3" placeholder="JavaScript, React, UI Design, Figma, ..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <button type="button" class="btn btn-secondary" id="resetFormBtn">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Preview Panel -->
+            <div class="preview-panel">
+                <div class="preview-header">
+                    <h2>Live Preview</h2>
+                    <button class="btn btn-secondary btn-small" id="refreshPreviewBtn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 4v6h-6"></path>
+                            <path d="M1 20v-6h6"></path>
+                            <path d="M3.51 9a9 9 0 0114.85-3.36M20.49 15a9 9 0 01-14.85 3.36"></path>
+                        </svg>
+                        Refresh
+                    </button>
+                </div>
+                
+                <div class="preview-content" id="previewContent">
+                    <!-- Live preview generated here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for adding sections -->
+    <div id="addSectionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3>Add Section</h3>
+            <p>Choose a section type to add:</p>
+            <div class="section-options">
+                <button type="button" class="section-option" data-type="about">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>About</span>
+                </button>
+                <button type="button" class="section-option" data-type="projects">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="9"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    <span>Projects</span>
+                </button>
+                <button type="button" class="section-option" data-type="skills">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                    </svg>
+                    <span>Skills</span>
+                </button>
+                <button type="button" class="section-option" data-type="contact">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Contact</span>
+                </button>
+            </div>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" id="cancelSectionBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

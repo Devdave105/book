@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortaBuild - Build Your Professional Portfolio in Minutes</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2H3v10h10V2z"></path>
+                    <path d="M21 2h-10v10h10V2z"></path>
+                    <path d="M13 12H3v10h10v-10z"></path>
+                    <path d="M21 12h-10v10h10v-10z"></path>
+                </svg>
+                <span>PortaBuild</span>
+            </div>
+            
+            <button class="hamburger" id="hamburgerBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#demo" class="nav-link">Try Demo</a></li>
+                <li id="navDashboard" style="display: none;"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li id="navLogin"><a href="login.html" class="nav-link">Login</a></li>
+                <li id="navRegister"><a href="register.html" class="nav-link">Register</a></li>
+                <li id="navLogout" style="display: none;"><button class="nav-link" onclick="logout()" style="background: none; border: none; cursor: pointer;">Logout</button></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Build Your Professional Portfolio in Minutes</h1>
+                <p class="hero-subtitle">Showcase your skills, projects, and achievements effortlessly with PortaBuild's intuitive portfolio builder.</p>
+                
+                <div class="hero-buttons">
+                    <a href="register.html" class="btn btn-primary">Create Portfolio</a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=600&fit=crop" alt="Professional working on portfolio">
+                <div class="image-shadow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need to create a stunning portfolio</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop" alt="Easy to use interface">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+                            </svg>
+                        </div>
+                        <h3>Easy to Use</h3>
+                        <p>Intuitive drag-and-drop builder with no coding required. Create professional portfolios in minutes.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-adf4e7a5a6f4?w=500&h=300&fit=crop" alt="Responsive design">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>Fully Responsive</h3>
+                        <p>Your portfolio looks stunning on all devices – desktop, tablet, and mobile. Auto-optimized layouts.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1561849628-b283ae0e3fd5?w=500&h=300&fit=crop" alt="Customizable design">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"></path>
+                            </svg>
+                        </div>
+                        <h3>Customizable</h3>
+                        <p>Personalize colors, layouts, fonts, and sections to match your unique personal brand.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop" alt="Publish instantly">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                        <h3>Publish Instantly</h3>
+                        <p>Go live with your portfolio in one click. Share your unique portfolio URL with anyone.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc82d0a4f3e?w=500&h=300&fit=crop" alt="Professional templates">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3>Professional Templates</h3>
+                        <p>Choose from expertly designed templates crafted by designers for maximum impact.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f70d504f0?w=500&h=300&fit=crop" alt="Secure and safe">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Secure & Safe</h3>
+                        <p>Your data is secure with our encrypted storage and privacy-first approach.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop" alt="Analytics and insights">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="2" x2="12" y2="22"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3>Analytics & Insights</h3>
+                        <p>Track portfolio views, visitor engagement, and performance metrics in real-time dashboards.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop" alt="Multiple portfolios">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Multiple Portfolios</h3>
+                        <p>Create and manage multiple portfolios for different roles, skills, or projects in one account.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-image">
+                        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=500&h=300&fit=crop" alt="Social media integration">
+                    </div>
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </div>
+                        <h3>Social Integration</h3>
+                        <p>Link social media profiles, showcase your GitHub, LinkedIn, Twitter and other channels seamlessly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Get started in three simple steps</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <h3>Create Account</h3>
+                        <p>Sign up with your email and choose your role. It takes less than a minute.</p>
+                    </div>
+                </div>
+
+                <div class="step-arrow">→</div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20m10-10H2"></path>
+                        </svg>
+                        <h3>Customize</h3>
+                        <p>Choose a template and customize it with your content, images, and personal touch.</p>
+                    </div>
+                </div>
+
+                <div class="step-arrow">→</div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        <h3>Publish</h3>
+                        <p>Hit publish and share your portfolio with the world. Celebrate your success!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="interactive-demo" id="demo">
+        <div class="container">
+            <h2 class="section-title">Try It Live</h2>
+            <p class="section-subtitle">See how easy it is to build your portfolio</p>
+            
+            <div class="demo-container">
+                <div class="demo-editor">
+                    <h3>Edit Your Portfolio</h3>
+                    <div class="demo-form">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" id="demoName" value="Alex Johnson" placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Title</label>
+                            <input type="text" id="demoTitle" value="Creative Designer & Developer" placeholder="Your professional title">
+                        </div>
+                        <div class="form-group">
+                            <label>Bio</label>
+                            <textarea id="demoBio" placeholder="Tell your story...">Passionate about creating beautiful and functional digital experiences. With 5+ years of experience in design and development, I help brands achieve their goals.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Accent Color</label>
+                            <div class="color-picker">
+                                <input type="radio" name="demoColor" value="#2563EB" checked> Blue
+                                <input type="radio" name="demoColor" value="#EC4899"> Pink
+                                <input type="radio" name="demoColor" value="#10B981"> Green
+                                <input type="radio" name="demoColor" value="#F59E0B"> Amber
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-full" id="demoReset">Reset Demo</button>
+                    </div>
+                </div>
+
+                <div class="demo-preview">
+                    <div class="portfolio-card">
+                        <div class="portfolio-header">
+                            <div class="portfolio-avatar"></div>
+                            <div class="portfolio-info">
+                                <h2 id="previewName">Alex Johnson</h2>
+                                <p id="previewTitle">Creative Designer & Developer</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-bio">
+                            <p id="previewBio">Passionate about creating beautiful and functional digital experiences. With 5+ years of experience in design and development, I help brands achieve their goals.</p>
+                        </div>
+                        <div class="portfolio-section">
+                            <h3>Featured Projects</h3>
+                            <div class="project-item">
+                                <div class="project-placeholder"></div>
+                                <div>
+                                    <h4>Mobile App Design</h4>
+                                    <p>An intuitive weather application</p>
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-placeholder"></div>
+                                <div>
+                                    <h4>Web Platform</h4>
+                                    <p>Full-stack SaaS solution</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-section">
+                            <h3>Skills</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">UI Design</span>
+                                <span class="skill-tag">Web Development</span>
+                                <span class="skill-tag">User Research</span>
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-cta">
+                <p>Ready to build your professional portfolio?</p>
+                <a href="register.html" class="btn btn-primary">Get Started Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Have questions? We're here to help.</p>
+            
+            <div class="contact-content">
+                <p>Email: <a href="mailto:support@portabuild.com">support@portabuild.com</a></p>
+                <p>Follow us on social media for updates and inspiration</p>
+                
+                <div class="social-links">
+                    <a href="#" title="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7.63.85 9-2 2-2.64 2.44-7.7.79-10.89z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" title="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" title="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.547 2.914 1.181.092-.916.349-1.546.635-1.903-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 PortaBuild. All rights reserved. | Building professional portfolios since 2024.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
